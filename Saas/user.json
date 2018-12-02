@@ -1,0 +1,39 @@
+{
+    "User": {
+        "Username": "test@test.com",
+        "Attributes": [
+            {
+                "Name": "sub",
+                "Value": "6e6f86ab-f104-4d97-9ce3-583bcacaf2eb"
+            },
+            {
+                "Name": "custom:tier",
+                "Value": "Advanced"
+            },
+            {
+                "Name": "custom:tenant_id",
+                "Value": "999"
+            },
+            {
+                "Name": "given_name",
+                "Value": "Test"
+            },
+            {
+                "Name": "family_name",
+                "Value": "User"
+            },
+            {
+                "Name": "custom:role",
+                "Value": "tenantAdmin"
+            },
+            {
+                "Name": "email",
+                "Value": "test@test.com"
+            }
+        ],
+        "UserCreateDate": "2018-11-30T18:21:35.841Z",
+        "UserLastModifiedDate": "2018-11-30T18:21:35.841Z",
+        "Enabled": true,
+        "UserStatus": "FORCE_CHANGE_PASSWORD"
+    }
+}

@@ -6,3 +6,64 @@ Analytics
 Operations
 Billing
 Saas devOps
+
+
+SET AWS_ACCESS_KEY_ID=ASIAXYZLSLC3GVMH7G7M
+SET AWS_SECRET_ACCESS_KEY=4XgD70r3mIWcdsC2+BO3MjjNtBPqjVxQ7akz5SK3
+SET AWS_SESSION_TOKEN=FQoGZXIvYXdzEHsaDMVuhj/02Zs/ZBg+CSLuAR+NXU9v7jwzwl4wVJBMDqtCx0ZYUvSAPhPAwuUpS4Jj9ke0xBVGyvCBWG2iouuqk3jCsepg81kfsF/BdhKDru7JwVrRDdmfkV56sGtbNrpomqyNq3SmZ8Pq+ZieqbZb0Y6mfXZBYuKzm2uPs3yzEMH63ahcK1Q+kC5sZN+M4QQ+ki8PWcwD3Qp8ZkFko5E12juEWOB1fR+hen7hG+AZJjVN2ngRw3GAnYJ1CavoOYpx6YBbCJOZyL7UiYDnzKAB01tqXDpUUzgPehbRZnWolVsN0QCLoPMX7E24BbIbD0dlLKAO9HSl1DZgjyidASsor+qF4AU=
+SET AWS_DEFAULT_REGION=us-east-1
+
+
+Pool Id us-east-1_ozk5y56xJ
+Pool ARN arn:aws:cognito-idp:us-east-1:534277937334:userpool/us-east-1_ozk5y56xJ
+
+
+
+SaaS App Client
+
+app client id: 
+
+34bqr0arqajli1kiln12kij8jj
+
+ALB DNS
+modul-LoadB-19UA0WVHHG7SR-1772728682.us-east-1.elb.amazonaws.com
+
+
+
+curl --header "Content-Type: application/json" --request POST --data '{"userPoolId": "us-east-1_ozk5y56xJ", "tenant_id": "999", "userName": "test@test.com", "email": "test@test.com", "firstName": "Test", "lastName": "User", "role": "tenantAdmin", "tier": "Advanced"}' http://modul-LoadB-19UA0WVHHG7SR-1772728682.us-east-1.elb.amazonaws.com/user/create
+
+
+{"User":{"Username":"test@test.com","Attributes":[{"Name":"sub","Value":"6e6f86ab-f104-4d97-9ce3-583bcacaf2eb"},{"Name":"custom:tier","Value":"Advanced"},{"Name":"custom:tenant_id","Value":"999"},{"Name":"given_name","Value":"Test"},{"Name":"family_name","Value":"User"},{"Name":"custom:role","Value":"tenantAdmin"},{"Name":"email","Value":"test@test.com"}],"UserCreateDate":"2018-11-30T18:21:35.841Z","UserLastModifiedDate":"2018-11-30T18:21:35.841Z","Enabled":true,"UserStatus":"FORCE_CHANGE_PASSWORD"}}
+
+
+
+curl --header "Content-Type: application/json" --request POST --data '{"id": "111", "role": "tenantAdmin", "company_name": "Test SaaS Tenant", "tier": "Advanced", "status": "Active"}' http://modul-LoadB-19UA0WVHHG7SR-1772728682.us-east-1.elb.amazonaws.com/tenant
+
+
+http://module-saas-bootcamp-base-lab1accelerat-webbucket-2155zdn2glwf.s3-website-us-east-1.amazonaws.com
+
+*Shyam123
+
+
+JSON web token   JWT:
+
+eyJraWQiOiIyeWxiWDF3NlJTcVlvYnpmeEh0M0VYTWdORGdJUmFMTlVyRlVxUVFXMUMwPSIsImFsZyI6IlJTMjU2In0.eyJzdWIiOiIxNmQyODg3Ni0wYWMxLTRiMjgtYjI0MC00NmE5NzZhZTcxN2EiLCJjdXN0b206dGllciI6IkZyZWUgVGllciIsImlzcyI6Imh0dHBzOlwvXC9jb2duaXRvLWlkcC51cy1lYXN0LTEuYW1hem9uYXdzLmNvbVwvdXMtZWFzdC0xX3ZHd1lBWFI0YiIsImNvZ25pdG86dXNlcm5hbWUiOiJzaGFua2FydGhhbnVAZ21haWwuY29tIiwiY3VzdG9tOnRlbmFudF9pZCI6IlRFTkFOVGMyMDIzODkyOGJmNjRlMTI4N2E3OTkyZDk5ZWQ5NTBjIiwiZ2l2ZW5fbmFtZSI6InNoYW5rYXIiLCJhdWQiOiJoZ280cmY4ZW1pNm9nZWh2dTNtZHZnbTlkIiwiZXZlbnRfaWQiOiI2MjFiM2Q4OS1mNGNmLTExZTgtYjc5ZC05ZDc3MzFmNmM3NDkiLCJ0b2tlbl91c2UiOiJpZCIsImF1dGhfdGltZSI6MTU0MzYwMzIxNywiZXhwIjoxNTQzNjA2ODE3LCJjdXN0b206cm9sZSI6IlRlbmFudEFkbWluIiwiaWF0IjoxNTQzNjAzMjE3LCJmYW1pbHlfbmFtZSI6IlRoYW51c2hrb2RpIiwiZW1haWwiOiJzaGFua2FydGhhbnVAZ21haWwuY29tIn0.mVGh2lAV6Z2Od-4sf5mFdHTYFkkwk3lqmBSrhOO8Rtg0_lzWXNLUVP0qcbd9uBc2Botg7iTddJuczbrpbku_-EbmFlH5ESoxlkEvflnTM-K0ZfAvFR5X2trq95FfR7K2b16fAXrOJJT_Cf20uiY817gyhfmdDqKZAl9TRLxaKrU6ZpDmnbk1BirAHNzXnGxD8QCGFNb4V83MgtmrvCf5piQ7R19RIJh3tsKOPsmb7Y-L57F7IFXcSlqv8gUmuG3RzpXfn3OnJ-yT0nkYzhBobMfCZ2L6Eb1v56OI7FpbkSLOqiN2JGpMVuJprriMpwRsa52z0Thfx1zuaMNL7qUXHg
+
+
+
+ Invoke URL: https://si3uddf0zg.execute-api.us-east-1.amazonaws.com/prod
+
+
+ curl https://si3uddf0zg.execute-api.us-east-1.amazonaws.com/prod/product/health
+
+
+ curl --header "Content-Type: application/json" --request POST --data '{"sku": "1234", "title": "My Product", "description": "A Great Product", "condition": "Brand New", "conditionDescription": "New", "numberInStock": "1"}' https://si3uddf0zg.execute-api.us-east-1.amazonaws.com/prod/product
+
+
+ curl https://API-GATEWAY-PROD-URL/product/health
+
+
+
+ use git repo.. lab 1 was provisioned ahead
+
+ use cloud9
